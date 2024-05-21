@@ -116,7 +116,7 @@ export default function AppBar() {
 
       
 
-                <div onMouseLeave={handleMenuCloseProducts}>
+                {/* <div onMouseLeave={handleMenuCloseProducts}>
                     <Button  sx={{ borderRadius: '0',     minWidth: '50px', 
                         minHeight: '50px',  }} onClick={handleMenuOpenProducts} endIcon={
                     Boolean(anchorElProducts) ?  < ArrowDropUp /> : < ArrowDropDown />
@@ -126,8 +126,9 @@ export default function AppBar() {
                         open={Boolean(anchorElProducts)}
                         onClose={handleMenuCloseProducts}
                         style={{
-        
-                            zIndex: '1'
+                            position: 'fixed'
+                            // position: 'absolute',
+                            // zIndex: '1'
                         }}
                       
                     >
@@ -137,8 +138,14 @@ export default function AppBar() {
                             </Link>
                         </MenuItem>
                     </Menu>
-                </div>
+                </div> */}
 
+            <Link href="/mini_ml" >
+                    <Button sx={{ borderRadius: '0',     minWidth: '50px', 
+                        minHeight: '50px',  }}>
+                        MINI ML
+                    </Button>
+                </Link>
                      
                 <Link href="/about" >
                     <Button sx={{ borderRadius: '0',     minWidth: '50px', 

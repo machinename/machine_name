@@ -1,4 +1,4 @@
-import {Button, Divider, Paper} from '@mui/material';
+import { Button } from '@mui/material';
 import styles from '../styles/page.module.css';
 import { ArrowForward } from '@mui/icons-material';
 
@@ -10,7 +10,7 @@ dotenv.config();
 
 // App component with references and sections for Home, Experience, and Projects
 export default function Solutions() {
-    const contactEmail = process.env.CONTACT_EMAIL;
+    const contactEmail = "info@machinename.dev";
     const subject = encodeURIComponent("Inquiry");
     const body = encodeURIComponent("Hello, I would like to know more about your services.");
     const mailtoLink = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
