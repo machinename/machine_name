@@ -10,9 +10,7 @@ export default function About() {
                 <h2 className={styles.h2}>Our Mission</h2>
                 <div>
                     <h3 className={styles.h3}>
-                        Committed to significantly<br/>
-                        improving the lives of as many<br/>
-                        one product at a time
+                    Our mission is to organize the world’s information and make it universally accessible and useful.<br/>
                     </h3> 
                 </div>
                 <div></div>

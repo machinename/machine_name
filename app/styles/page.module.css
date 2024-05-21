@@ -67,7 +67,7 @@ justify-content: space-between;
 
 .h1 {  
   font-Weight: 300;
-  font-size: max(4vw, 3.5rem);
+  font-size: max(5vw, 3.5rem);
 }
 
 .h2 {
@@ -87,19 +87,25 @@ justify-content: space-between;
 
 .p {
   font-Weight: 200;
+  font-size: 1.0rem;
+}
+
+
+.p2 {
+  font-Weight: 200;
   font-size: 1.25rem;
 }
 
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-} */
 
 .dropdownLink {
   text-decoration: none;
   color: inherit;
-  display: block;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  /* padding: 10px; */
 }
 
 .appBar {
@@ -173,7 +179,7 @@ justify-content: space-between;
   padding-right: max(0.5vw, 10px);
 }
 
-.footerEnd1, .footerEnd2, .footerEnd3 {
+.mobileFooterEnd {
   display: none;
 }
 
@@ -212,14 +218,14 @@ justify-content: space-between;
 
   .footer {
     width: 100%;
-    height: max(15vh, 200px);
+    height: max(15vh, 150px);
     bottom: 0;
     display: flex;
     flex-direction: column;
     z-index: 900;
   }
   
-  .footerStart, .footerEnd1, .footerEnd2, .footerEnd3 {
+  .footerStart, .mobileFooterEnd {
     display: flex;
     flex-direction: column;
     justify-content: center;
