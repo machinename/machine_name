@@ -19,18 +19,16 @@ export default function Footer() {
                 <p className={styles.p2}>© 2024 Machine Name</p>
             </div>
 
-            {/*Centered section containing socil media icons */}
-            <div className={styles.footerCenter}>
-                <div className={styles.footerCenterContent}>
-                </div>
-            </div>
 
             {/* End section containing the toggle for dark mode */}
             <div className={styles.footerEndContent}>
                 <IconButton aria-label="DarkMode" onClick={toggleTheme}>
                     <DarkMode color='secondary' />
                 </IconButton>
-                <Link href={GitHubUrl}>
+                <Link href={GitHubUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
                     <IconButton aria-label="GitHub">
                         <GitHub color='secondary'/>
                     </IconButton>
@@ -45,7 +43,10 @@ export default function Footer() {
             </div>
 
             <div className={styles.mobileFooterEndContent}>
-                <Link href={GitHubUrl}>
+                <Link href={GitHubUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
                 <IconButton aria-label="GitHub">
                     <GitHub color='secondary'/>
                 </IconButton>
