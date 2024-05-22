@@ -18,30 +18,20 @@
   justify-content: space-evenly;
 }
 
-.container {
+.container, .containerTwo {
   display:flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2%;  
 }
 
-.containerTwoA, .containerTwoB {
-  display:flex;
+.container {
   flex-direction: column;
-  height: 100%;
-  width: 50%;
-  padding: 2%;  
 }
 
-.containerTwoA {
-/* background-color: aliceblue; */
-justify-content: space-between;
-}
-
-.containerTwoB {
-  justify-content: center;
+.containerTwo {
+  flex-direction: row;
 }
 
 .h1,.h2,.h3,.h4{

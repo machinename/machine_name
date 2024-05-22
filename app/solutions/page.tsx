@@ -1,13 +1,9 @@
 import { Button } from '@mui/material';
 import styles from '../styles/page.module.css';
 import { ArrowForward } from '@mui/icons-material';
-
 import dotenv from 'dotenv';
-
 // Load environment variables from .env file
 dotenv.config();
-
-
 // App component with references and sections for Home, Experience, and Projects
 export default function Solutions() {
     const contactEmail = "info@machinename.dev";
