@@ -1,7 +1,6 @@
 import { ArrowForward } from '@mui/icons-material';
 import styles from '../styles/page.module.css'
 import { Button } from '@mui/material';
-import Image from 'next/image'
 
 export default function MiniML() {
   const DOWNLOAD_URL = "https://machinename.dev/mini_ml";

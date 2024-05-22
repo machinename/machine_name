@@ -1,39 +1,15 @@
 'use client'
 import styles from '../styles/page.module.css';
-import { Box,  Button, MenuItem, Paper } from '@mui/material';
-import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
+import { Box,  Button } from '@mui/material';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 
 export default function AppBar() {
-
-    const [menuOpen, setMenuOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
-
-    const handleMenuProducts = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const handleClickOutside = (event: MouseEvent) => {
-        if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-            setMenuOpen(false);
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('click', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
-
-
     return (
 
         <Box className={styles.appBar} sx={{ backgroundColor: 'background.default' }}>
-            <div className={styles.appBarStart}>
+            <Box className={styles.appBarStart}>
                 <Link href="/">
                 <Button sx={{ borderRadius: '0'  }}>MACHINE NAME</Button>
                 </Link>
@@ -49,12 +25,14 @@ export default function AppBar() {
                         MINI ML
                     </Button>
                 </Link>
-        
-            </div>
-
-            <div className={styles.appBarEnd}>                    
-  
-            </div>
+                <Link href="/blog" >
+                    <Button sx={{ borderRadius: '0' 
+                         }}>
+                        BLOG
+                    </Button>
+                </Link>
+            </Box>
+            <Box className={styles.appBarEnd} />
         </Box>
 
     ); 

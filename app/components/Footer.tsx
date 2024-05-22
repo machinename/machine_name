@@ -43,13 +43,13 @@ export default function Footer() {
                     <DarkMode color='secondary' />
                 </IconButton>
             </div>
+
             <div className={styles.mobileFooterEnd}>
                 <Link href={GitHubUrl}>
                 <IconButton aria-label="GitHub">
                     <GitHub color='secondary'/>
                 </IconButton>
                 </Link>
-
             </div>
         </div>
     );
