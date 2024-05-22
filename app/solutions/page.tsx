@@ -16,24 +16,21 @@ export default function Solutions() {
     const mailtoLink = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
 
     return (
-        <div className={styles.wrapperThree}>
+        <div className={styles.wrapperTwo}>
             <h2 className={styles.h2}>Tailored Tech Solutions</h2>
-            <div>
+            <div className={styles.container}>
                 <h3 className={styles.h3}>AI & Machine Learning</h3>
                 <h3 className={styles.h3}>Automation</h3>
                 <h3 className={styles.h3}>Cloud Intergation</h3>
                 <h3 className={styles.h3}>Full Stack Development</h3>
-                </div> 
-                <div>
-                    <p className={styles.p}>See How We Can Transform Your Small Business</p>
-
-
+            </div> 
+                <div className={styles.container}>
+                    <p className={styles.p1}>See How We Can Transform Your Small Business</p>
                     <a href={mailtoLink}>
                         <Button className={styles.button} color='secondary'sx={{ borderRadius: '0' }}variant="contained" endIcon={ <ArrowForward />}>
                             Contact
                         </Button>
                     </a>
-           
             </div> 
         </div> 
     );
