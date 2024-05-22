@@ -44,7 +44,7 @@ export default function Footer() {
                 </IconButton>
             </div>
 
-            <div className={styles.mobileFooterEnd}>
+            <div className={styles.mobileFooterEndContent}>
                 <Link href={GitHubUrl}>
                 <IconButton aria-label="GitHub">
                     <GitHub color='secondary'/>
