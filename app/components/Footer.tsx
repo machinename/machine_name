@@ -15,7 +15,7 @@ export default function Footer() {
         // Footer container with defined styles 
         <div className={styles.footer}>
             {/* Start of footer content */}
-            <div className={styles.footerStart}>
+            <div className={styles.footerStartContent}>
                 <p className={styles.p2}>© 2024 Machine Name</p>
             </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
 
             {/* End section containing the toggle for dark mode */}
-            <div className={styles.footerEnd}>
+            <div className={styles.footerEndContent}>
                 <IconButton aria-label="DarkMode" onClick={toggleTheme}>
                     <DarkMode color='secondary' />
                 </IconButton>
@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
 
             {/* End section for mobile mode */}
-            <div className={styles.mobileFooterEnd}>
+            <div className={styles.mobileFooterEndContent}>
             <IconButton aria-label="DarkMode" onClick={toggleTheme}>
                     <DarkMode color='secondary' />
                 </IconButton>
