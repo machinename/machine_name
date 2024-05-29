@@ -9,7 +9,7 @@ export default function MiniML() {
       <h2 className={styles.h2}>Mini ML</h2>
 
       <div className={styles.container}>
-        <p className={styles.p1}>
+        <p>
           Create and run ML algorithms straight from your mobile device
         </p>
         <Button color='secondary' sx={{ borderRadius: '0'}} variant="contained" 

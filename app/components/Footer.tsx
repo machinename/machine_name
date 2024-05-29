@@ -16,7 +16,7 @@ export default function Footer() {
         <div className={styles.footer}>
             {/* Start of footer content */}
             <div className={styles.footerStartContent}>
-                <p className={styles.p2}>© 2024 Machine Name</p>
+                <p>© 2024 Machine Name</p>
             </div>
 
 

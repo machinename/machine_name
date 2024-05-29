@@ -33,8 +33,6 @@
   flex-direction: row;
 }
 
-
-
 .h1,.h2,.h3,.h4 {
   font-Weight: 250;
   margin: 0;
@@ -53,20 +51,6 @@
   font-size: max(2.5vw, 2.5rem);
 }
 
-.h4 {  
-  font-size: max(2.0vw, 2.0rem);
-}
-
-
-.p1 {
-  font-Weight: 250;
-  font-size: max(1.25vw, 1.25rem);
-}
-
-.p2 {
-  font-Weight: 250;
-  font-size: max(1.0vw, 1.0rem);
-}
 
 
 .appBar {
@@ -86,12 +70,12 @@
 }
 .appBarContent {
   justify-content: flex-end;
-  width: 70%;
+  width: 50%;
   padding-right: max(0.5vw, 10px);
 }
 .appBarTitle {
   justify-content: flex-start;
-  width: 30%;
+  width: 50%;
   padding-left: max(0.5vw, 10px);
 }
 .footer {

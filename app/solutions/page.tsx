@@ -18,7 +18,7 @@ export default function Solutions() {
                 <h3 className={styles.h3}>Test Automation</h3>
             </div> 
             <div className={styles.container}>
-                <p className={styles.p1}>See How We Can Transform Your Small Business</p>
+                <p>See How We Can Transform Your Small Business</p>
                 <a href={mailtoLink}>
                     <Button className={styles.button} color='secondary'sx={{ borderRadius: '0' }}variant="contained" endIcon={ <ArrowForward />}>
                         Contact
