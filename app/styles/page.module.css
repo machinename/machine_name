@@ -14,7 +14,7 @@
 }
 
 .wrapperTwo {
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .container, .containerTwo {
