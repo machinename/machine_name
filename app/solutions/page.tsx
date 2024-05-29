@@ -1,30 +1,25 @@
 import { Button } from '@mui/material';
 import styles from '../styles/page.module.css';
-import { ArrowForward } from '@mui/icons-material';
 
 export default function Solutions() {
-    const contactEmail = "info@machinename.dev";
-    const subject = encodeURIComponent("Inquiry");
-    const body = encodeURIComponent("Hello, I would like to know more about your services.");
-    const mailtoLink = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    const CONTACT_Email = "info@machinename.dev";
+    const SUBJECT = encodeURIComponent("Inquiry");
+    const BODY = encodeURIComponent("Hello, I would like to know more about your services.");
+    const MAIL_TO_LINK = `mailto:${CONTACT_Email}?subject=${SUBJECT}&body=${BODY}`;
 
     return (
         <div className={styles.wrapperTwo}>
-            <h2 className={styles.h2}>Tailored Tech Solutions</h2>
-            <div className={styles.container}>
-                <h3 className={styles.h3}>AI & Machine Learning</h3>
-                <h3 className={styles.h3}>Cloud Intergation</h3>
-                <h3 className={styles.h3}>Full Stack Development</h3>
-                <h3 className={styles.h3}>Test Automation</h3>
-            </div> 
-            <div className={styles.container}>
-                <p>See How We Can Transform Your Small Business</p>
-                <a href={mailtoLink}>
-                    <Button className={styles.button} color='secondary'sx={{ borderRadius: '0' }}variant="contained" endIcon={ <ArrowForward />}>
-                        Contact
-                    </Button>
-                </a>
-            </div> 
+            <h1 className={styles.h1}>Tailored Solutions</h1>
+            <div>
+                <h2 className={styles.h2}>AI & Machine Learning</h2>
+                <h2 className={styles.h2}>Cloud Intergation</h2>
+                <h2 className={styles.h2}>Full Stack Development</h2>
+                <h2 className={styles.h2}>Test Automation</h2>
+            </div>
+            <div>
+                <p>See how our experts can transform your small business</p>
+                <Button color='secondary' sx={{ borderRadius: '0'}} variant="contained" href={MAIL_TO_LINK} rel="noopener noreferrer" target="_blank">CONTACT</Button>
+            </div>
         </div> 
     );
 };
