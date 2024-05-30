@@ -107,10 +107,6 @@ justify-content: center;
    display: none;
   }
 
-  .activeLink {
-    background-color: lightgray ;
-  }
-
   .appBarMobileMenu {
     position:fixed;
     display: flex;

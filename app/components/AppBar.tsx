@@ -9,14 +9,12 @@ import { useThemeContext } from './ThemeProvider';
 
 export default function AppBar() {
     const [isMenu, setIsMenu] = useState(false);
-    const pathname = usePathname()
     const contactEmail = "info@machinename.dev";
     const subject = encodeURIComponent("Inquiry");
     const body = encodeURIComponent("Hello, I would like to know more about your services.");
     const mailtoLink = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
     const iconButtonRef = useRef<HTMLButtonElement | null>(null);
     const menuRef = useRef<HTMLDivElement | null>(null);
-    const { isDarkTheme } = useThemeContext();
 
 
     useEffect(() => {
@@ -44,7 +42,7 @@ export default function AppBar() {
         <Box className={styles.appBar} sx={{ backgroundColor: 'background.default' }}>
             <Box className={styles.appBarStart}>
                 <Link href="/">
-                    <Button sx={{ borderRadius: '0' }} className={pathname === '/' ? styles.activeLink : ''}>MACHINE NAME</Button>
+                    <Button sx={{ borderRadius: '0' }}>MACHINE NAME</Button>
                 </Link>
                 <Box sx={{
                     height: '100%',
@@ -56,7 +54,7 @@ export default function AppBar() {
                     <Divider orientation="vertical"/>
                 </Box>
                 <Link href="/mini_ml">
-                    <Button sx={{ borderRadius: '0' }} className={pathname === '/mini_ml' ? styles.activeLink : ''}>MINI ML</Button>
+                    <Button sx={{ borderRadius: '0' }}>MINI ML</Button>
                 </Link>
                 <Box sx={{
                     height: '100%',
@@ -68,7 +66,7 @@ export default function AppBar() {
                     <Divider orientation="vertical"/>
                 </Box>
                 <Link href="/solutions">
-                    <Button sx={{ borderRadius: '0' }} className={pathname === '/solutions' ? styles.activeLink : ''}>SOLUTIONS</Button>
+                    <Button sx={{ borderRadius: '0' }}>SOLUTIONS</Button>
                 </Link>
             </Box>
             <Box className={styles.appBarStartMobile}>
@@ -83,7 +81,7 @@ export default function AppBar() {
                         <Divider orientation="vertical"/>
                     </Box>
                 <Link href="/">
-                    <Button sx={{ borderRadius: '0' }} className={pathname === '/' ? styles.activeLink : ''}>MACHINE NAME</Button>
+                    <Button sx={{ borderRadius: '0' }}>MACHINE NAME</Button>
                 </Link>
             </Box>
             <Box className={styles.appBarEnd} >
@@ -98,10 +96,10 @@ export default function AppBar() {
         {isMenu && ( 
         <Paper ref={menuRef} className={styles.appBarMobileMenu}>
             <Link href="/mini_ml">
-                <Button sx={{ borderRadius: '0' }} className={pathname === '/mini_ml' ? styles.activeLink : ''}>MINI ML</Button>
+                <Button sx={{ borderRadius: '0' }}>MINI ML</Button>
             </Link>
             <Link href="/solutions">
-                <Button sx={{ borderRadius: '0' }} className={pathname === '/solutions' ? styles.activeLink : ''}>SOLUTIONS</Button>
+                <Button sx={{ borderRadius: '0' }}>SOLUTIONS</Button>
             </Link>
         </Paper>
       )}
