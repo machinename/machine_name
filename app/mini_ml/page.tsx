@@ -8,9 +8,9 @@ export default function MiniML() {
       <h1 className={styles.h1}>Mini ML</h1>
       <div>
           <h2 className={styles.h2}>Privacy & Protection</h2>
-          <h2 className={styles.h2}>Cloud Services Provided By Firebase</h2>
+          <h2 className={styles.h2}>Powered By Firebase</h2>
           <h2 className={styles.h2}>Intuitive Interface</h2>
-          <h2 className={styles.h2}>Pre-Built Scikit-Learn Models</h2>
+          <h2 className={styles.h2}>Scikit-Learn Models</h2>
       </div>
       <div>
         <p>Create machine learning models and train them straight from your mobile device</p>
