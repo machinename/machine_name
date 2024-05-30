@@ -2,8 +2,10 @@
 import styles from '../styles/page.module.css';
 import { Box, Button, Divider } from '@mui/material';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 
 export default function AppBar() {
+    const pathname = usePathname()
     const contactEmail = "info@machinename.dev";
     const subject = encodeURIComponent("Inquiry");
     const body = encodeURIComponent("Hello, I would like to know more about your services.");
@@ -13,7 +15,7 @@ export default function AppBar() {
         <Box className={styles.appBar} sx={{ backgroundColor: 'background.default' }}>
             <Box className={styles.appBarStart}>
                 <Link href="/">
-                    <Button sx={{ borderRadius: '0'  }}>MACHINE NAME</Button>
+                    <Button sx={{ borderRadius: '0' }} className={pathname === '/' ? styles.activeLink : ''}>MACHINE NAME</Button>
                 </Link>
                 <Box sx={{
                     height: '100%',
@@ -22,20 +24,14 @@ export default function AppBar() {
                     flexDirection: 'row',
                     justifyContent: 'center'
                 }}>
-                <Divider orientation="vertical" sx={{
-                   
-                }}/>
+                    <Divider orientation="vertical"/>
                 </Box>
-                
-                <Link href="/mini_ml" >
-                    <Button sx={{ borderRadius: '0' }}>MINI ML</Button>
+                <Link href="/mini_ml">
+                    <Button sx={{ borderRadius: '0' }} className={pathname === '/mini_ml' ? styles.activeLink : ''}>MINI ML</Button>
                 </Link>
-                <Link href="/solutions" >
-                    <Button sx={{ borderRadius: '0' }}>SOLUTIONS</Button>
+                <Link href="/solutions">
+                    <Button sx={{ borderRadius: '0' }} className={pathname === '/solutions' ? styles.activeLink : ''}>SOLUTIONS</Button>
                 </Link>
-                {/* <Link href="/blog" >
-                    <Button sx={{ borderRadius: '0' }}>BLOG</Button>
-                </Link> */}
             </Box>
             <Box className={styles.appBarEnd} >
                 <a href={mailtoLink}>

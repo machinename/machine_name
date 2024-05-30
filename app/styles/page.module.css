@@ -59,6 +59,11 @@
   padding-right: 10px;
 }
 
+.activeLink {
+  background-color: lightgray ;
+}
+
+
 .footer {
   display: flex;
   flex-direction: row;
