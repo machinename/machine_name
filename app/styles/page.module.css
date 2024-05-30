@@ -10,36 +10,18 @@
 }
 
 .wrapper {
-  justify-content: center;
+justify-content: center;
 }
 
 .wrapperTwo {
   justify-content: space-evenly;
 }
 
-.containerGrid {
-  max-width: 1920px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.gridItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  border: 0.5px solid lightgray;
-  height: 40vh;
-  min-height: 400px;
-  text-align: left
-}
 
 .h1,.h2 {
   padding: 0;
   margin: 0;
-  font-Weight: 400;
+  font-Weight: 300;
 }
 .h1 {  
   font-size: 3rem;
@@ -61,15 +43,17 @@
 .appBarStart, .appBarEnd {
   display: flex;
   align-items: center;
-  width: 100%;
   height: 100%;
-
 }
 
 .appBarStart {
   justify-content: flex-start;
   width: 70%;
   padding-left: 10px;
+}
+
+.appBarStartMobile {
+  display: none;
 }
 
 .appBarEnd {
@@ -82,6 +66,9 @@
   background-color: lightgray ;
 }
 
+.activeLinkDarkMode {
+  background-color: green
+}
 
 .footer {
   display: flex;
@@ -112,8 +99,38 @@
 }
 
 @media screen and (max-width: 600px) {
-  .containerGrid {
+  .gridContainer {
     grid-template-columns: 1fr;
+  }
+
+  .appBarStart {
+   display: none;
+  }
+
+  .activeLink {
+    background-color: lightgray ;
+  }
+
+  .appBarMobileMenu {
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: max(5vh, 50px);
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 0%;
+    z-index: 1050;
+    overflow: hidden;
+  }
+
+  .appBarStartMobile {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-start;
+    width: 70%;
+    padding-left: 10px;
   }
 
   .footer {
