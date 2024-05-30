@@ -17,6 +17,25 @@
   justify-content: space-evenly;
 }
 
+.containerGrid {
+  max-width: 1920px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border: 0.5px solid lightgray;
+  height: 40vh;
+  min-height: 400px;
+  text-align: left
+}
+
 .h1,.h2 {
   padding: 0;
   margin: 0;
@@ -70,7 +89,7 @@
   align-items: center;
   width: 100%;
   height: max(5vh, 50px);
-  z-index: 900;
+  z-index: 1000;
 }
 
 .footerStart, .footerEnd { 
@@ -93,13 +112,17 @@
 }
 
 @media screen and (max-width: 600px) {
+  .containerGrid {
+    grid-template-columns: 1fr;
+  }
+
   .footer {
     width: 100%;
     height: max(15vh, 150px);
     bottom: 0;
     display: flex;
     flex-direction: column;
-    z-index: 900;
+    z-index: 1000;
   }
   
   .footerStart, .mobileFooterEnd {

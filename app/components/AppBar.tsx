@@ -19,7 +19,7 @@ export default function AppBar() {
                 </Link>
                 <Box sx={{
                     height: '100%',
-                    padding: '10px',
+                    padding: '4px',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center'
@@ -29,6 +29,15 @@ export default function AppBar() {
                 <Link href="/mini_ml">
                     <Button sx={{ borderRadius: '0' }} className={pathname === '/mini_ml' ? styles.activeLink : ''}>MINI ML</Button>
                 </Link>
+                <Box sx={{
+                    height: '100%',
+                    padding: '4px',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center'
+                }}>
+                    <Divider orientation="vertical"/>
+                </Box>
                 <Link href="/solutions">
                     <Button sx={{ borderRadius: '0' }} className={pathname === '/solutions' ? styles.activeLink : ''}>SOLUTIONS</Button>
                 </Link>
