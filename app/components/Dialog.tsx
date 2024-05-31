@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useRef, useEffect } from 'react';
 import { Button, Paper } from '@mui/material';
 import styles from '../styles/page.module.css';
@@ -24,7 +26,6 @@ const Dialog: React.FC<DialogProps> = ({ isDialog, handleCloseDialog, handleDele
             document.removeEventListener('mousedown', handleClickOutside);
         }
 
-        // Cleanup on component unmount
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };

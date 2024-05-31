@@ -4,7 +4,6 @@ import React, { createContext, ReactNode, useContext, useState } from 'react';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-// Creating light and dark themes using Material-UI's createTheme function
 const lightTheme = createTheme({
     palette: {
         mode: 'light',
@@ -35,59 +34,57 @@ const darkTheme = createTheme({
     }
 });
 
-// Creating a context for managing theme state
-const ThemeContext = createContext({
-    toggleTheme: () => { },
-    isDarkTheme: true,
-});
-
-// Custom hook to access the theme context
-export const useThemeContext = () => useContext(ThemeContext);
-
-// Creating a context for managing conversation state
 interface Message {
     sender: string;
     message: string;
     type: 'text' | 'code';
 }
 
-interface ConversationType {
+interface AppContextType {
+    toggleTheme: () => void;
+    isDarkTheme: boolean;
+    isChatOpen: boolean;
+    setIsChatOpen: React.Dispatch<React.SetStateAction<boolean>>;
     conversation: Message[];
     setConversation: React.Dispatch<React.SetStateAction<Message[]>>;
 }
 
-const ConversationContext = createContext<ConversationType | undefined>(undefined);
+const AppContext = createContext<AppContextType | undefined>(undefined);
 
-export const useConversation = (): ConversationType => {
-    const context = useContext(ConversationContext);
+export const useAppContext = (): AppContextType => {
+    const context = useContext(AppContext);
     if (!context) {
-        throw new Error('useConversation must be used within a ConversationProvider');
+        throw new Error('useAppContext must be used within an AppProvider');
     }
     return context;
 };
 
-// AppProvider component to manage both theme and conversation state
+
+// AppProvider component to manage theme, conversation, and chat state
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [isChatOpen, setIsChatOpen] = useState(false);
     const [conversation, setConversation] = useState<Message[]>([]);
 
-    // Function to toggle between light and dark themes
     const toggleTheme = () => {
         setIsDarkTheme((prevTheme) => !prevTheme);
     };
 
-    // Selecting the current theme based on isDarkTheme state
     const currentTheme = isDarkTheme ? darkTheme : lightTheme;
 
-    // Providing both theme and conversation contexts
     return (
-        <ThemeContext.Provider value={{ toggleTheme, isDarkTheme }}>
-            <ConversationContext.Provider value={{ conversation, setConversation }}>
-                <MuiThemeProvider theme={currentTheme}>
-                    <CssBaseline />
-                    {children}
-                </MuiThemeProvider>
-            </ConversationContext.Provider>
-        </ThemeContext.Provider>
+        <AppContext.Provider value={{
+            isDarkTheme,
+            toggleTheme,
+            isChatOpen,
+            setIsChatOpen,
+            conversation,
+            setConversation
+        }}>
+            <MuiThemeProvider theme={currentTheme}>
+                <CssBaseline />
+                {children}
+            </MuiThemeProvider>
+        </AppContext.Provider>
     );
 };
