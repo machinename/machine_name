@@ -16,9 +16,7 @@ export default function Solutions() {
                 <h2 className={styles.h2}>Full Stack Development</h2>
                 <h2 className={styles.h2}>Test Automation</h2>
             </div>
-       
-                <Button color='secondary' sx={{ borderRadius: '0'}} variant="contained" href={MAIL_TO_LINK} rel="noopener noreferrer" target="_blank">CONTACT</Button>
-         
+            <Button color='secondary' sx={{ borderRadius: '0'}} variant="contained" href={MAIL_TO_LINK} rel="noopener noreferrer" target="_blank">CONTACT</Button>
         </div>
     );
 };
