@@ -17,14 +17,86 @@ justify-content: center;
   justify-content: space-evenly;
 }
 
+.chatContainer {
+  max-width: 1000px;  
+  width: 80%;
+  border-radius: 0%;
+  max-height : 80vh;
+  min-height: 500px;   
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  overflow-y: auto;
+  gap: 20px;
+}
 
-.h1,.h2 {
+.chatHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+}
+
+.chatMessage {
+
+  text-align: left;
+  width: 100%;
+
+  padding: 12px;
+  background-color: aliceblue
+}
+
+.chatInput {
+  margin-top: 10px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  border-radius: 0;
+}
+
+.dialog {
+  border-radius: 0%;
+  width: 400px;
+  height: 200px;
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  /* padding: 10px; */
+}
+
+.dialogHeader {
+  text-align: left;
+  padding: 10px;
+}
+
+.dialogContent {
+  text-align: left;
+  padding: 10px;
+}
+
+.dialogActions {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+
+.h2 {
   padding: 0;
   margin: 0;
   font-Weight: 300;
 }
 .h1 {  
   font-size: 3rem;
+  
 }
 .h2 {
   font-size: 2rem;
@@ -106,6 +178,27 @@ justify-content: center;
   .appBarStart {
    display: none;
   }
+
+  .chatContainer {
+    
+    width: 100%;  
+    border-radius: 0%;
+    max-height : 60vh;
+    min-height: 375px;    
+
+    overflow-y: auto;
+    border-radius: 0,   
+  }
+  
+  .chatInput {
+    margin-top: 10px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    width: 100%;  
+    border-radius: 0;
+  }
+  
 
   .appBarMobileMenu {
     position:fixed;

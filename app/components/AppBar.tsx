@@ -3,9 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/page.module.css';
 import { Box, Button, Divider, IconButton, Paper } from '@mui/material';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'
 import MenuIcon from '@mui/icons-material/Menu';
-import { useThemeContext } from './ThemeProvider';
 
 export default function AppBar() {
     const [isMenu, setIsMenu] = useState(false);
@@ -25,7 +23,7 @@ export default function AppBar() {
             menuRef.current &&
             !menuRef.current.contains(target) &&
             iconButtonRef.current &&
-            !iconButtonRef.current.contains(target) // Check if click is not on the IconButton
+            !iconButtonRef.current.contains(target)
           ) {
             setIsMenu(false);
           }
@@ -46,7 +44,7 @@ export default function AppBar() {
                 </Link>
                 <Box sx={{
                     height: '100%',
-                    padding: '4px',
+                    padding: '10px',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center'
@@ -56,15 +54,7 @@ export default function AppBar() {
                 <Link href="/mini_ml">
                     <Button sx={{ borderRadius: '0' }}>MINI ML</Button>
                 </Link>
-                <Box sx={{
-                    height: '100%',
-                    padding: '4px',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center'
-                }}>
-                    <Divider orientation="vertical"/>
-                </Box>
+
                 <Link href="/solutions">
                     <Button sx={{ borderRadius: '0' }}>SOLUTIONS</Button>
                 </Link>

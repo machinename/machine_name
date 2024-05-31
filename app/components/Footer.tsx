@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react'
-import { useThemeContext } from './ThemeProvider'
 import styles from '../styles/page.module.css'
 import Link from 'next/link'
 import {  DarkMode, GitHub} from '@mui/icons-material';
 import { IconButton } from '@mui/material'
+import { useThemeContext } from '../contexts/AppProvider';
 
 export default function Footer() {
     const GitHubUrl = "https://github.com/machinename"
