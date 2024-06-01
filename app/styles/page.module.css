@@ -20,8 +20,8 @@ justify-content: center;
 .chatContainer {
   width: 600px;  
   border-radius: 0%;
-  max-height : 80vh;
-  min-height: 500px;   
+  max-height : 60vh;
+  min-height: 400px; 
   display: flex;
   flex-direction: column;
   border-radius: 0;
@@ -103,6 +103,7 @@ justify-content: center;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: max(5vh, 50px);
   z-index: 1100;
@@ -116,7 +117,7 @@ justify-content: center;
 
 .appBarStart {
   justify-content: flex-start;
-  width: 70%;
+
   padding-left: 10px;
 }
 
@@ -126,7 +127,7 @@ justify-content: center;
 
 .appBarEnd {
   justify-content: flex-end;
-  width: 30%;
+
   padding-right: 10px;
 }
 
@@ -136,6 +137,25 @@ justify-content: center;
 
 .activeLinkDarkMode {
   background-color: green
+}
+
+.thingsContainer {
+  display: grid;
+  width: 800px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-radius: 0px;
+  gap: 10px; /* Optional: adds space between the grid items */
+}
+
+.things {
+  background-color: lightblue; /* Optional: background color for visualization */
+  display: flex;
+  border-radius: 0px;
+  align-items: center;
+  justify-content: center;
+  height: 400px; 
+  width: 100%;/* Adjust the height as needed */
 }
 
 .footer {
@@ -175,16 +195,12 @@ justify-content: center;
     grid-template-columns: 1fr;
   }
 
-  .appBarStart {
-   display: none;
-  }
-
   .chatContainer {
     
     width: 100%;  
     border-radius: 0%;
     max-height : 60vh;
-    min-height: 375px;    
+    min-height: 400px;    
 
     overflow-y: auto;
     border-radius: 0,   
@@ -199,28 +215,6 @@ justify-content: center;
     border-radius: 0;
   }
   
-
-  .appBarMobileMenu {
-    position:fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: max(5vh, 50px);
-    margin-left: 10px;
-    padding: 10px;
-    border-radius: 0%;
-    z-index: 1050;
-    overflow: hidden;
-  }
-
-  .appBarStartMobile {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: flex-start;
-    width: 70%;
-    padding-left: 10px;
-  }
 
   .footer {
     width: 100%;

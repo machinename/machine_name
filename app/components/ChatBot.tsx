@@ -105,6 +105,7 @@ export default function ChatBot() {
                     value={input}
                     onKeyDown={(e) => {
                         if (e.key === 'Enter') {
+                            e.preventDefault();
                             handleMessageSend();
                         }
                     }}
