@@ -28,7 +28,7 @@ justify-content: center;
   overflow-y: auto;
   gap: 20px;
   padding: 20px;
-  
+ 
 }
 
 
@@ -48,7 +48,8 @@ justify-content: center;
   display: flex;
   align-items: center;
   width: 600px;
-  border-radius: 0;
+  border-radius: 0px;
+  /* background-color: lightgray; */
 }
 
 .dialog {
@@ -145,17 +146,17 @@ justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   border-radius: 0px;
-  gap: 10px; /* Optional: adds space between the grid items */
+  gap: 10px;
 }
 
 .things {
-  background-color: lightblue; /* Optional: background color for visualization */
+  background-color: lightblue; 
   display: flex;
   border-radius: 0px;
   align-items: center;
   justify-content: center;
   height: 400px; 
-  width: 100%;/* Adjust the height as needed */
+  width: 100%;
 }
 
 .footer {

@@ -4,6 +4,7 @@ import {
   CircularProgress,
   Divider,
   IconButton,
+  Input,
   InputBase,
   Paper,
 } from '@mui/material';
@@ -98,9 +99,13 @@ export default function ChatBot() {
 
             <Paper className={styles.chatInput}>
                 <InputBase
+                sx={{
+                    ml: 1, flex: 1,
+                
+                }}
                 multiline={true  }
                 maxRows={5}
-                    sx={{ ml: 1, flex: 1}}
+       
                     type="text"
                     value={input}
                     onKeyDown={(e) => {
@@ -110,7 +115,7 @@ export default function ChatBot() {
                         }
                     }}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder="Enter Here"
+                    // placeholder="Enter Here"
                     inputProps={{ 'aria-label': '' }}
                 />
                 <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
