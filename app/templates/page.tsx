@@ -15,7 +15,7 @@ export default function Templates() {
 
         <Paper className=" flex flex-col text-center items-center justify-center rounded-none lg:w-[600px] w-[400px]">
             <div className=" w-full p-2 flex flex-col  justify-center text-center">
-                <h1 className="font-bold text-2x1">MACHINE NAME</h1>  
+                <h1 className="font-bold text-2x1">Machine Name</h1>  
             </div>
             <div className="w-full text-center p-2 flex flex-col gap-2">
                 <p>Create a copy of machinename.dev with Google Cloud VERTEX-AI.</p>  

@@ -23,7 +23,7 @@ export default function Solutions() {
                 <p>Brief description about Test Automation...</p>
             </Paper>
         </div>
-        <h1 className="text-4xl">machinename.dev</h1>
+        <h1 className="text-3xl">machinename.dev</h1>
     </main>
   );
 };

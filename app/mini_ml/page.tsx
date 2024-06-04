@@ -23,7 +23,7 @@ export default function MiniML() {
                 <p>Brief description about Intuitive Interface...</p>
             </Paper>
         </div>
-        <h1 className="text-4xl">machinename.dev</h1>
+        <h1 className="text-3xl">machinename.dev</h1>
     </main>
   );
 };
