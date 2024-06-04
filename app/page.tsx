@@ -25,6 +25,8 @@ export default function Home() {
     const [input, setInput] = useState<string>('');
     const [isDialog, setIsDialog] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [showMachineName, setShowMachineName] = useState(false);
+    const [showLastText, setShowLastText] = useState(false);
 
     const conversationEndRef = useRef<HTMLDivElement>(null);
 
@@ -33,6 +35,25 @@ export default function Home() {
         setIsDialog(false);
         setIsChatOpen(false);
     }
+
+  
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowMachineName(true);
+      }, 1200); // 1000 milliseconds delay
+  
+      return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setShowLastText(true);
+        }, 2400); 
+    
+        return () => clearTimeout(timer);
+      }, []);
+  
 
     const handleMessageSend = async () => {
         setIsChatOpen(true);
@@ -78,7 +99,12 @@ export default function Home() {
 
       <main className={conversation.length == 0 ? "flex flex-col min-h-[700px] h-[100vh] items-center justify-center pt-20" : "flex flex-col min-h-[700px] items-center pt-20 mb-[100px]"}>
       {conversation.length == 0 && (
-        <h1 className="text-5xl">Machine Name</h1>
+        <div className="'flex flex-col text-left w-[400px]">
+            <h1 className="text-5xl">Chat With</h1>
+          {showMachineName && <h1 className="text-5xl">Machine Name</h1>}
+          {showLastText && <h1 className="text-5xl">Type Away</h1>}
+        </div>
+
       )}
       
                 <div className="text-black bg-blue rounded-none lg:w-[600px] w-[400px] flex flex-col gap-5 overflow-y-auto">

@@ -10,7 +10,7 @@ export default function Solutions() {
                 <h1 className="font-bold text-2x1">AI & Machine Learning</h1>
                 <p>Brief description about AI & Machine Learning...</p>
             </Paper>
-            <Paper className=" p-2 rounded-none text-centerw-[400px]">   
+            <Paper className=" p-2 rounded-none text-center w-[400px]">   
                 <h1 className="font-bold text-2x1">Cloud Intergation</h1> 
                 <p>Brief description about Cloud Intergation...</p>
             </Paper>
