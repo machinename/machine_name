@@ -1,3 +1,14 @@
+# Next.js Machine Name Portfolio
+
+Welcome to my personal developer portfolio site built with Next.js!
+
+## Overview
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: Material-UI (MUI)
+- **Generative AI**: Vertex-AI
+
 ## Getting Started
 
 ### Installation
@@ -35,13 +46,13 @@ To get started with this project, follow these steps:
     - Create a `.env` file in the project directory.
     - Add the following Firebase configuration keys to the `.env` file:
         ```bash
-        FIREBASE_API_KEY="YOUR_FIREBASE_API_KEY"
-        FIREBASE_AUTH_DOMAIN="YOUR_FIREBASE_AUTH_DOMAIN"
-        FIREBASE_PROJECT_ID="YOUR_FIREBASE_PROJECT_ID"
-        FIREBASE_STORAGE_BUCKET="YOUR_FIREBASE_STORAGE_BUCKET"
-        FIREBASE_MESSAGING_SENDER_ID="YOUR_FIREBASE_MESSAGING_SENDER_ID"
-        FIREBASE_APP_ID="YOUR_FIREBASE_APP_ID"
-        FIREBASE_MEASUREMENT_ID="YOUR_FIREBASE_MEASUREMENT_ID"
+        FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+        FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
+        FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+        FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE_BUCKET
+        FIREBASE_MESSAGING_SENDER_ID=YOUR_FIREBASE_MESSAGING_SENDER_ID
+        FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
+        FIREBASE_MEASUREMENT_ID=YOUR_FIREBASE_MEASUREMENT_ID
         ```
 
 5. **Run the project in development mode:**
