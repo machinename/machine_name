@@ -1,8 +1,4 @@
-'use client'
-
 import React, { useRef, useEffect } from 'react';
-import { Button, Paper } from '@mui/material';
-import styles from '../styles/page.module.css';
 
 interface DialogProps {
     isDialog: boolean;
@@ -36,18 +32,28 @@ const Dialog: React.FC<DialogProps> = ({ isDialog, handleCloseDialog, handleDele
     }
 
     return (
-        <Paper className={styles.dialog} ref={dialogRef}>
-            <div className={styles.dialogHeader}>
-                <p>Delete Chat?</p>
+        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 bg-white dark:bg-gray-800 shadow-md rounded-none p-4">
+            <div className="text-left pb-2">
+                <p className="text-lg font-semibold">Delete Chat?</p>
             </div>
-            <div className={styles.dialogContent}>
+            <div className="text-left pb-4">
                 <p>This will delete all of the chat history. This will also delete all related activity.</p>
             </div>
-            <div className={styles.dialogActions}>
-                <Button onClick={handleCloseDialog} sx={{ borderRadius: '0' }}>CANCEL</Button>
-                <Button onClick={handleDeleteChat} sx={{ borderRadius: '0' }}>DELETE</Button>
+            <div className="flex justify-end">
+                <button
+                    className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg mr-2"
+                    onClick={handleCloseDialog}
+                >
+                    CANCEL
+                </button>
+                <button
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg"
+                    onClick={handleDeleteChat}
+                >
+                    DELETE
+                </button>
             </div>
-        </Paper>
+        </div>
     );
 };
 

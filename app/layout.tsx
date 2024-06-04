@@ -1,12 +1,10 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-import './globals.css'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 import { AppProvider } from './contexts/AppProvider'
-import AppBar from './components/AppBar'
-import Footer from './components/Footer'
+import Header from "./components/Header";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MACHINE NAME",
@@ -21,13 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}> 
-        <AppProvider> 
-          <AppBar/>
-            {children}
-          <Footer/>
-        </AppProvider>
+      <body className={inter.className}>
+      <AppProvider> 
+        <Header />
+        {children}
+      </AppProvider>
       </body>
     </html>
-  )
+  );
 }
