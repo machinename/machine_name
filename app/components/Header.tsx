@@ -78,7 +78,7 @@ export default function AppBar() {
                     </div>
                 </div>
                 {isMenu && isMobile && (
-                <Paper ref={menuRef} className="absolute bg-white shadow p-2 ml-2 mt-2 flex flex-col items-center rounded-none z-1200">
+                <Paper ref={menuRef} className="absolute bg-white shadow p-2 ml-2 mt-2 flex w-[200px] flex-col items-center rounded-none z-1200">
                     <Link href="/mini_ml" className="w-full">
                         <Button className="rounded-none w-full">MINI ML</Button>
                     </Link>
