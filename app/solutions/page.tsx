@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Solutions() {
   return (
-    <main className="flex flex-col min-h-[700px] h-[100vh] items-center justify-center pt-20 pb-20 gap-20">
+    <main className="flex flex-col min-h-[800px] h-[100vh] items-center justify-center pt-[60px] pb-20 gap-20">
         <h1 className="text-5xl">Solutions</h1>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <Paper className=" p-2 rounded-none text-center">
@@ -23,14 +23,7 @@ export default function Solutions() {
                 <p>Brief description about Test Automation...</p>
             </Paper>
         </div>
-        <Image
-              src="/next.svg"
-              alt="Next.js Logo"
-              className="dark:invert"
-              width={160}
-              height={80}
-              priority
-        />
+        <h1 className="text-4xl">machinename.dev</h1>
     </main>
   );
 };
