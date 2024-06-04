@@ -45,7 +45,7 @@ export default function AppBar() {
     return (
         <>          
 
-        <header className={scrolled ? "bg-white shadow fixed top-0 w-full items-center h-[max(5vh,50px)] p-2 z-1200" : "bg-white fixed top-0 w-full h-[max(5vh,50px)] p-2 z-1200"}>
+        <header className={scrolled ? "bg-white shadow fixed top-0 w-full flex flex-row items-center justify-center h-[max(5vh,50px)] p-2 z-1200" : "bg-white fixed top-0 w-full h-[max(5vh,50px)] p-2 z-1200 flex flex-row items-center justify-center"}>
                 <div className="container mx-auto ">
                     <div className="flex justify-between items-center">
                 <nav className="flex flex-row items-center justify-center space-x-3">
