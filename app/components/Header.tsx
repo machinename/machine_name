@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {Button, Divider, IconButton, Paper, useMediaQuery} from '@mui/material';
 import Link from 'next/link';
-import { Menu } from '@mui/icons-material';
+import { Close, Menu } from '@mui/icons-material';
 
 export default function AppBar() {
     const isMobile = useMediaQuery('(max-width:732px)');
@@ -45,12 +45,12 @@ export default function AppBar() {
     return (
         <>          
 
-        <header className={scrolled ? "bg-white shadow fixed top-0 w-full z-1200" : "bg-white fixed top-0 w-full z-1200 "}>
+        <header className={scrolled ? "bg-white shadow fixed top-0 w-full z-900" : "bg-white fixed top-0 w-full z-900"}>
                 <div className="container mx-auto h-[max(5vh,50px)] ">
                     <div className="flex justify-between h-full items-center p-2">
                 <nav className="flex flex-row items-center  justify-center space-x-3  ">
                     {isMobile && (
-                    <IconButton ref={iconButtonRef}  onClick={() => setIsMenu(!isMenu)}><Menu color='secondary'/></IconButton>)}
+                    <IconButton ref={iconButtonRef}  onClick={() => setIsMenu(!isMenu)}> {isMenu ? <Close color='secondary'/> : <Menu color='secondary'/>}</IconButton>)}
                     <Link href="/" className="text-black hover:text-gray-400">
                         <Button className="rounded-none">
                             MACHINE NAME
@@ -78,7 +78,7 @@ export default function AppBar() {
                     </div>
                 </div>
                 {isMenu && isMobile && (
-                <Paper ref={menuRef} className="absolute bg-white shadow p-2 ml-2 mt-2 flex w-[200px] flex-col items-center rounded-none z-1200">
+                <Paper ref={menuRef} className="absolute bg-white shadow p-2  flex w-full flex-col items-center rounded-none">
                     <Link href="/mini_ml" className="w-full">
                         <Button className="rounded-none w-full">MINI ML</Button>
                     </Link>

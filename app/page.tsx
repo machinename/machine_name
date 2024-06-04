@@ -102,7 +102,7 @@ export default function Home() {
                 </div>
         
 
-            <Paper className={"bg-gray-100 flex items-center p-2 rounded-none lg:w-[600px] w-[400px] fixed bottom-0 mb-12 z-1000"}>
+            <Paper className={"bg-gray-100 flex items-center p-2 rounded-none lg:w-[600px] w-[400px] fixed bottom-0 mb-12 z-150"}>
                 <InputBase
                     className="ml-1 flex-1"
                     multiline={true}
