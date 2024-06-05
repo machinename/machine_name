@@ -1,6 +1,6 @@
-# Next.js Machine Name Portfolio
+# Machine Name
 
-Welcome to my Machine Name portfolio built with Next.js!
+Welcome to Machine Name built with Next.js!
 
 ## Overview
 - **Framework**: Next.js
