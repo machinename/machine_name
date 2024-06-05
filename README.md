@@ -14,19 +14,21 @@ Welcome to my developer portfolio built with Next.js!
 ### Installation
 To get started with this project, follow these steps:
 
-1. **Clone the repository:**
+1. **Install Node.js**: Download and install Node.js from the official website (https://nodejs.org/). This will also install npm.
+
+2. **Clone the repository:**
     ```bash
     git clone https://github.com/machinename/machine_name.git
     cd machine_name
     ```
 
-2. **Install dependencies:**
+3. **Install dependencies:**
     ```bash
     npm install
     ```
 
-3. **Firebase Setup:**
-    - Create a Firebase account and project if you haven't already done so.
+4. **Firebase Setup:**
+    - Create a Firebase account and project from the official website (https://firebase.google.com/).
     - Obtain Firebase configuration keys from the Firebase Console:
         - After setting up your project, navigate to the Firebase Console.
         - Click on your project to enter the project dashboard.
@@ -42,7 +44,7 @@ To get started with this project, follow these steps:
         - Follow the instructions provided to enable the Gemini API and integrate it with your Firebase project.
 
 
-4. **Set up environment variables:**
+5. **Set up environment variables:**
     - Create a `.env` file in the project directory.
     - Add the following Firebase configuration keys to the `.env` file:
         ```bash
@@ -55,12 +57,12 @@ To get started with this project, follow these steps:
         FIREBASE_MEASUREMENT_ID=YOUR_FIREBASE_MEASUREMENT_ID
         ```
 
-5. **Run the project in development mode:**
+6. **Run the project in development mode:**
     ```bash
     npm run dev
     ```
 
-6. **Open in your browser:**
+7. **Open in your browser:**
     Open [http://localhost:3000](http://localhost:3000) to view the project in your browser. The page will auto-update as you edit the files.
 
 ### Customization
