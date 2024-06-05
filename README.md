@@ -2,7 +2,7 @@
 
 Welcome to Machine Name built with Next.js!
 
-## Overview
+## Tech Stack
 - **Framework**: Next.js
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
