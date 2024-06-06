@@ -29,20 +29,9 @@ To get started with this project, follow these steps:
 
 4. **Firebase Setup:**
     - Create a Firebase account and project from the official website (https://firebase.google.com/).
-    - Obtain Firebase configuration keys from the Firebase Console:
-        - After setting up your project, navigate to the Firebase Console.
-        - Click on your project to enter the project dashboard.
-        - Navigate to the "Project settings" by clicking on the gear icon next to "Project Overview" in the top-left corner.
-        - In the "General" tab, scroll down to the section titled "Your apps" and select the web app you've added.
-        - Copy the Firebase configuration keys provided.
-    - Add a web app to your Firebase project:
-        - In the "Project settings," navigate to the "General" tab if you're not already there.
-        - Scroll down to the section titled "Your apps" and click on the "</>" icon labeled "Add app."
-        - Follow the instructions to register your web app and obtain the Firebase configuration keys.
-    - Enable the Gemini API:
-        - In the Firebase Console, navigate to the "Build with Gemini" tab, located in the left sidebar.
-        - Follow the instructions provided to enable the Gemini API and integrate it with your Firebase project.
-
+    - Obtain Firebase configuration keys from the Firebase Console under Project Settings
+    - Add a Flutter app to your Firebase project and obtain its Firebase configuration keys
+    - Enable the Firebase Gemini API:
 
 5. **Set up environment variables:**
     - Create a `.env` file in the project directory.
