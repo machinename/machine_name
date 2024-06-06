@@ -7,10 +7,7 @@ export default function Projects() {
   return (
     <main className="flex min-h-[800px] h-[100vh] flex-col items-center pt-20 pl-20 pr-20">
       <div className="container mx-auto flex flex-col items-center gap-10">
-        <div className="w-full text-left">
-          <h1 className="text-5xl">Projects - by machinename.dev</h1>
-        </div>
-    
+      <h1 className="text-5xl">Projects</h1>
       {projectPosts.map(project => (
           <li style={{
             listStyleType: 'none'
@@ -30,8 +27,6 @@ export default function Projects() {
             </Link>
           </li>
         ))}
-
-
     <p className="text-xl">machinename.dev</p>
     </div>
     </main>

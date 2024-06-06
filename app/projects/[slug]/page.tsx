@@ -26,7 +26,7 @@ export default function ProjectPostPage() {
         <Image src={post.image} alt="Home Screen" width={1600} height={800}/>
         </div>
        
-        <div className="container">
+        <div className="container w-full">
           <ReactMarkdown
             rehypePlugins={[rehypeRaw]}
             className={styles.markdown}
