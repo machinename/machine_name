@@ -26,7 +26,7 @@ To get started with this project, follow these steps:
     ```
     npm install
     ```
-4. **Setup Firebase:**
+4. **Firebase Setup:**
     - Create a Firebase account and project from the official website (https://firebase.google.com/).
     - Add a Web app to your Firebase project and obtain its Firebase configuration keys under project settings.
     - Enable Firebase Vertex AI Gemini API in the Firebase Console.
