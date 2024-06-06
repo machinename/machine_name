@@ -45,7 +45,11 @@ export default function AppBar() {
     return (
         <>          
 
-        <header className={scrolled ? "bg-white shadow fixed top-0 w-full z-900" : "bg-white fixed top-0 w-full z-900"}>
+        <header className={scrolled ? "bg-white shadow fixed top-0 w-full" : "bg-white fixed top-0 w-full"
+        }
+        style={{
+            zIndex: '1200'
+        }}>
                 <div className="container mx-auto h-[max(5vh,50px)] ">
                     <div className="flex justify-between h-full items-center p-2">
                 <nav className="flex flex-row items-center  justify-center space-x-3  ">
@@ -60,14 +64,12 @@ export default function AppBar() {
                     {!isMobile && (
                         <>
                             <Divider orientation="vertical" flexItem />
-                            <Link href="/mini_ml" className="text-black hover:text-gray-400">
-                                <Button className="rounded-none">MINI ML</Button>
+      
+                            <Link href="/projects" className="text-black hover:text-gray-400">
+                                <Button className="rounded-none">PROJECTS</Button>
                             </Link>
-                            <Link href="/solutions" className="text-black hover:text-gray-400">
-                                <Button className="rounded-none">SOLUTIONS</Button>
-                            </Link>
-                            <Link href="/templates" className="text-black hover:text-gray-400">
-                                <Button className="rounded-none">TEMPLATES</Button>
+                            <Link href="/blog" className="text-black hover:text-gray-400">
+                                <Button className="rounded-none">BLOG</Button>
                             </Link>
                         </>
                         )}
@@ -79,14 +81,11 @@ export default function AppBar() {
                 </div>
                 {isMenu && isMobile && (
                 <Paper ref={menuRef} className="absolute bg-white shadow p-2  flex w-full flex-col items-center rounded-none">
-                    <Link href="/mini_ml" className="w-full">
-                        <Button className="rounded-none w-full">MINI ML</Button>
+                    <Link href="/projects" className="w-full">
+                        <Button className="rounded-none w-full">PROJECTS</Button>
                     </Link>
-                    <Link href="/solutions" className="w-full">
-                        <Button className="rounded-none w-full">SOLUTIONS</Button>
-                    </Link>
-                    <Link href="/templates" className="w-full">
-                        <Button className="rounded-none w-full">TEMPLATES</Button>
+                    <Link href="/blog" className="text-black hover:text-gray-400">
+                                <Button className="rounded-none">BLOG</Button>
                     </Link>
                 </Paper>
             )}

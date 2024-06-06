@@ -127,50 +127,51 @@ export default function Home() {
                     <div ref={conversationEndRef} />
                 </div>
         
+                <div className={"fixed flex flex-col w-full items-center px-2 bottom-0 z-500"}>
+                    <Paper className={"bg-gray-100 flex items-center p-2 rounded-none lg:w-[600px] w-full"}>
+                        <InputBase
+                        className="ml-1 flex-1"
+                        multiline={true}
+                        maxRows={2}
+                        type="text"
+                        value={input}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                e.preventDefault();
+                                handleMessageSend();
+                            }
+                        }}
+                        onChange={(e) => setInput(e.target.value)}
+                        inputProps={{ 'aria-label': '' }}
+                        />
+                    
+                        <IconButton
+                        color="secondary"
+                        aria-label="directions"
+                        onKeyDown={handleMessageSend}
+                        onClick={handleMessageSend}
+                        disabled={input.trim() === ''}
+                    >
+                        <Forward />
+                    </IconButton>
 
-            <Paper className={"bg-gray-100 flex items-center p-2 rounded-none lg:w-[600px] w-[400px] fixed bottom-0 mb-12 z-150"}>
-                <InputBase
-                    className="ml-1 flex-1"
-                    multiline={true}
-                    maxRows={2}
-                    type="text"
-                    value={input}
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                            e.preventDefault();
-                            handleMessageSend();
-                        }
-                    }}
-                    onChange={(e) => setInput(e.target.value)}
-                    inputProps={{ 'aria-label': '' }}
-                />
                 
-                <IconButton
-                    color="secondary"
-            
-                    aria-label="directions"
-                    onKeyDown={handleMessageSend}
-                    onClick={handleMessageSend}
-                    disabled={input.trim() === ''}
-                >
-                    <Forward />
-                </IconButton>
-
-            
-                {conversation.length > 0 && (
-                    <IconButton color="secondary" className="" aria-label="directions" onClick={() => setIsChatOpen(!isChatOpen)}>
-                        {isChatOpen ? <KeyboardArrowDown /> : <KeyboardArrowUp />}
-                    </IconButton>
-                )}
-                {conversation.length > 0 && (
-                    <IconButton color="secondary" onClick={() => setIsDialog(true)}>
-                        <Delete />
-                    </IconButton>
-                )}
-            </Paper>
-
+                    {conversation.length > 0 && (
+                        <IconButton color="secondary" className="" aria-label="directions" onClick={() => setIsChatOpen(!isChatOpen)}>
+                            {isChatOpen ? <KeyboardArrowDown /> : <KeyboardArrowUp />}
+                        </IconButton>
+                    )}
+                    {conversation.length > 0 && (
+                        <IconButton color="secondary" onClick={() => setIsDialog(true)}>
+                            <Delete />
+                        </IconButton>
+                    )}
+                </Paper>
+                <div className='text-center p-2'>
+                    <p>Chat can make mistakes. Check important info.</p>
+                </div>
+            </div>
             <Dialog isDialog={isDialog} handleCloseDialog={() => setIsDialog(false)} handleDeleteChat={handleDeleteChat} />
-        
     </main>
     );
 }
