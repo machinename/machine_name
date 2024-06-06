@@ -15,19 +15,17 @@ This Next.js project serves as both my developer portfolio and a boilerplate for
 ## Getting Started
 To get started with this project, follow these steps:
 
-1. **Install Node.js:**: Download and install Node.js from the official website (https://nodejs.org/). This will also install npm.
+1. **Install Node.js:** Download and install Node.js from the official website (https://nodejs.org/). This will also install npm.
 
 2. **Clone Repository:**
     ```
     git clone https://github.com/machinename/machine_name.git
     cd machine_name
     ```
-
 3. **Install Dependencies:**
     ```
     npm install
     ```
-
 4. **Setup Firebase:**
     - Create a Firebase account and project from the official website (https://firebase.google.com/).
     - Obtain Firebase configuration keys from the Firebase Console under Project Settings
@@ -35,17 +33,17 @@ To get started with this project, follow these steps:
     - Enable Firebase Vertex AI Gemini API in the Firebase Console.
 
 5. **Configure Environment Variables:**
-    - Create a `.env` file in the project directory.
+    - Create a `.env` file in the root directory of your Next.js project.
     - Add the following Firebase configuration keys to the `.env` file:
-        ```
-        FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
-        FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
-        FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
-        FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE_BUCKET
-        FIREBASE_MESSAGING_SENDER_ID=YOUR_FIREBASE_MESSAGING_SENDER_ID
-        FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
-        FIREBASE_MEASUREMENT_ID=YOUR_FIREBASE_MEASUREMENT_ID
-        ```
+    ```
+    FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+    FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
+    FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+    FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE_BUCKET
+    FIREBASE_MESSAGING_SENDER_ID=YOUR_FIREBASE_MESSAGING_SENDER_ID
+    FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
+    FIREBASE_MEASUREMENT_ID=YOUR_FIREBASE_MEASUREMENT_ID
+    ```
       - Ensure that you include the `.env` file in your `.gitignore` file to prevent sensitive information from being committed to your version control system.
 
 6. **Run Project:**
