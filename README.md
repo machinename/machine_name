@@ -2,12 +2,15 @@
 
 Welcome to Machine Name built with Next.js!
 
+## Description
+This Next.js project serves as both my developer portfolio along with being a boilerplate for implementing Google's Gemini AI Vertex API functionalities. It includes various pages such as a chat page, contact form, and projects page. 
+
 ## Tech Stack
 - **Framework**: Next.js
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Components**: Material-UI (MUI)
-- **Generative AI**: Vertex-AI
+- **Generative AI**: Gemini AI Vertex API 
 
 ## Getting Started
 
@@ -16,24 +19,24 @@ To get started with this project, follow these steps:
 
 1. **Install Node.js**: Download and install Node.js from the official website (https://nodejs.org/). This will also install npm.
 
-2. **Clone the repository:**
+2. **Clone Repository**
     ```bash
     git clone https://github.com/machinename/machine_name.git
     cd machine_name
     ```
 
-3. **Install dependencies:**
+3. **Install Dependencies**
     ```bash
     npm install
     ```
 
-4. **Firebase Setup:**
+4. **Setup Firebase**
     - Create a Firebase account and project from the official website (https://firebase.google.com/).
     - Obtain Firebase configuration keys from the Firebase Console under Project Settings
     - Add a Flutter app to your Firebase project and obtain its Firebase configuration keys
-    - Enable the Firebase Gemini API:
+    - Enable Firebase Vertex AI Gemini API in the Firebase Console.
 
-5. **Set up environment variables:**
+5. **Configure Environment Variables**
     - Create a `.env` file in the project directory.
     - Add the following Firebase configuration keys to the `.env` file:
         ```bash
@@ -46,12 +49,12 @@ To get started with this project, follow these steps:
         FIREBASE_MEASUREMENT_ID=YOUR_FIREBASE_MEASUREMENT_ID
         ```
 
-6. **Run the project in development mode:**
+6. **Run Project**
     ```bash
     npm run dev
     ```
 
-7. **Open in your browser:**
+7. **Open In Your Browser:**
     Open [http://localhost:3000](http://localhost:3000) to view the project in your browser. The page will auto-update as you edit the files.
 
 ### Customization
@@ -62,7 +65,3 @@ When you're ready to deploy the project to production, you can use platforms lik
 
 ### License
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
-
----
-
-This README provides a quick overview and instructions for getting started with the project. If you have any questions or need further assistance, feel free to reach out or refer to the documentation provided by the frameworks and services used in this project. Happy coding!
