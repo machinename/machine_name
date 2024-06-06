@@ -28,8 +28,8 @@ To get started with this project, follow these steps:
     ```
 4. **Setup Firebase:**
     - Create a Firebase account and project from the official website (https://firebase.google.com/).
-    - Obtain Firebase configuration keys from the Firebase Console under Project Settings
-    - Add a Flutter app to your Firebase project and obtain its Firebase configuration keys
+    - Obtain Firebase configuration keys from the Firebase Console under Project Settings.
+    - Add a Flutter app to your Firebase project and obtain its Firebase configuration keys.
     - Enable Firebase Vertex AI Gemini API in the Firebase Console.
 
 5. **Configure Environment Variables:**
