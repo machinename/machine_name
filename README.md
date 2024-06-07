@@ -1,9 +1,6 @@
 # Machine Name
 
-Welcome to Machine Name built with Next.js!
-
-## Description
-This Next.js project serves as both my developer portfolio and a boilerplate for implementing Google's Gemini AI Vertex API functionalities. It includes various pages such as a chat page, contact form, and projects page. 
+Welcome to my developer portfolio–Machine Name, built with Next.js!
 
 ## Tech Stack
 - **Framework**: Next.js
