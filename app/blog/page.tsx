@@ -1,5 +1,5 @@
 
-import { BlogPosts } from "../components/posts"
+// import { BlogPosts } from "../components/posts"
 
 export const metadata = {
   title: 'Blog',
@@ -9,11 +9,11 @@ export const metadata = {
 export default function Blog() {
   return (
     <section>
-      <h1 className="mb-8 tracking-tighter">
-        Blog
+      <h1 className=" tracking-tighter">
+        /blog
       </h1>
       <div className="my-8">
-        <BlogPosts />
+        {/* <BlogPosts /> */}
       </div>
     </section>
   )

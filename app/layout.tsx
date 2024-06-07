@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased max-w-2xl mt-8 mx-auto px-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <body className="antialiased max-w-3xl mx-auto px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
         <main className="flex items-center justify-center flex-col">
           <AppProvider> 
           <Navbar/>

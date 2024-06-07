@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { CustomMDX } from '../../components/mdx'
-import { formatDate, getBlogPosts } from '../utils'
+// import { CustomMDX } from '../../components/mdx'
+// import { formatDate, getBlogPosts } from '../utils'
 import { baseUrl } from '../../sitemap'
 
 interface BlogPost {
@@ -21,65 +21,65 @@ interface Params {
   }
 }
 
-export async function generateStaticParams() {
-  let posts = getBlogPosts()
+// export async function generateStaticParams() {
+//   let posts = getBlogPosts()
 
-  return posts.map((post: BlogPost) => ({
-    slug: post.slug,
-  }))
-}
+//   return posts.map((post: BlogPost) => ({
+//     slug: post.slug,
+//   }))
+// }
 
-export async function generateMetadata({
-  params,
-}: Params): Promise<Metadata | undefined> {
-  let post = getBlogPosts().find((post: BlogPost) => post.slug === params.slug)
-  if (!post) {
-    return
-  }
+// export async function generateMetadata({
+//   params,
+// }: Params): Promise<Metadata | undefined> {
+//   let post = getBlogPosts().find((post: BlogPost) => post.slug === params.slug)
+//   if (!post) {
+//     return
+//   }
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata
-  let ogImage = image ? image : `/og?title=${encodeURIComponent(title)}`
+//   let {
+//     title,
+//     publishedAt: publishedTime,
+//     summary: description,
+//     image,
+//   } = post.metadata
+//   let ogImage = image ? image : `/og?title=${encodeURIComponent(title)}`
 
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [ogImage],
-    },
-  }
-}
+//   return {
+//     title,
+//     description,
+//     openGraph: {
+//       title,
+//       description,
+//       type: 'article',
+//       publishedTime,
+//       url: `${baseUrl}/blog/${post.slug}`,
+//       images: [
+//         {
+//           url: ogImage,
+//         },
+//       ],
+//     },
+//     twitter: {
+//       card: 'summary_large_image',
+//       title,
+//       description,
+//       images: [ogImage],
+//     },
+//   }
+// }
 
 // Blog component to render a blog post
 export default function Blog({ params }: Params) {
-  let post = getBlogPosts().find((post: BlogPost) => post.slug === params.slug)
+  // let post = getBlogPosts().find((post: BlogPost) => post.slug === params.slug)
 
-  if (!post) {
-    notFound()
-  }
+  // if (!post) {
+  //   notFound()
+  // }
 
   return (
     <section>
-      <script
+      {/* <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
@@ -111,7 +111,7 @@ export default function Blog({ params }: Params) {
       </div>
       <article className="prose">
         <CustomMDX source={post.content} />
-      </article>
+      </article> */}
     </section>
   )
 }

@@ -6,9 +6,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <section>
-      <h1 className="mb-8 tracking-tighter">
-        Contact
-      </h1>
+      <h1 className="mb-8 tracking-tighter">Contact</h1>
     </section>
   );
 }

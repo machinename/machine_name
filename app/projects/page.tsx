@@ -1,4 +1,4 @@
-import { ProjectList } from "../components/posts"
+import { ProjectList } from "../components/lists"
 
 export const metadata = {
   title: 'Projects',
@@ -8,9 +8,6 @@ export const metadata = {
 export default function Projects() {
   return (
     <section>
-      <h1 className="mb-8 tracking-tighter">
-        Projects
-      </h1>
       <ProjectList/>
     </section>
   )
