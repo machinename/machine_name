@@ -6,7 +6,8 @@ interface DialogProps {
     handleDeleteChat: () => void;
 }
 
-export function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }: DialogProps) {
+
+export default function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }: DialogProps) {
     const dialogRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

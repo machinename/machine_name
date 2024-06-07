@@ -13,10 +13,12 @@ import {
     Delete 
 } from '@mui/icons-material';
 import firebase from "../../firebaseConfig";
-import {Dialog }  from './../components/dialog';
-import { useAppContext } from './../contexts/app_provider';
+
+
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Dialog from '../components/dialog';
+import { useAppContext } from '../contexts/app_provider';
 
 export default function Page() {
 
