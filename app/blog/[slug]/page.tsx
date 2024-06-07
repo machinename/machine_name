@@ -93,7 +93,7 @@ export default function Blog({ params }: Params) {
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/work/${post.slug}`,
+            url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
               name: 'Machine Name',
@@ -104,11 +104,11 @@ export default function Blog({ params }: Params) {
       <h1 className="tracking-tighter">
         {post.metadata.title}
       </h1>
-      {/* <div className="flex justify-between items-center mt-2 mb-8 text-sm">
+      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
         </p>
-      </div> */}
+      </div>
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
