@@ -73,13 +73,13 @@ export default function Page() {
                 const text = response.text();
                 setConversation(prevConversation => [
                     ...prevConversation,
-                    { sender: 'SERVER', message: text, type: detectCodeType(text) },
+                    { sender: 'SERVER', message: text },
                 ]);
             } catch (error) {
                 console.error('Error sending message to Vertex AI:', error);
                 setConversation(prevConversation => [
                     ...prevConversation,
-                    { sender: 'SERVER', message: 'An error occurred. Please try again.', type: 'text' },
+                    { sender: 'SERVER', message: 'An error occurred. Please try again.'},
                 ]);
             } finally {
                 setIsLoading(false);
@@ -87,12 +87,6 @@ export default function Page() {
         }
     };
 
-    function detectCodeType(text: string) {
-        if (text.includes("```")) {
-            return 'code';
-        }
-        return 'text';
-    }
 
     useEffect(() => {
         if (conversationEndRef.current) {
@@ -123,7 +117,7 @@ export default function Page() {
                     ))
 
                   )}
-                    {/* {} */}
+               
 
 
                     {isLoading && (
@@ -133,6 +127,9 @@ export default function Page() {
                     )}
                     <div ref={conversationEndRef} />
                 </>
+                <Dialog isDialog={isDialog} handleCloseDialog={()=> {
+                    setIsDialog(false);
+                }} handleDeleteChat={handleDeleteChat}/>
             </section>
     
     <div className="flex flex-col fixed w-full bottom-0 max-w-2xl px-2">
@@ -179,6 +176,7 @@ export default function Page() {
                     <p>Chat can make mistakes. Check important info.</p>
                 </div>
                 </div>
+
     </>
     );
 }
