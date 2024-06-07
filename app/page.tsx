@@ -6,10 +6,10 @@ export default function Page() {
 
 return (  
     
-<section className='pb-24'>
+<section className="pb-24">
 
 
-    <h1 className="tracking-tighter mb-8 ">Machine Name</h1>
+    <h1 className="tracking-tighter mb-8">Machine Name</h1>
    
     <h2 className="mb-2 tracking-tighter">
       Who We Are
