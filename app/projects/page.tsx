@@ -1,34 +1,27 @@
-import { Paper } from '@mui/material';
-import Image from "next/image";
-import Link from 'next/link';
-import { projectPosts } from "./projectData";
+
+import { ProjectPosts } from "../components/posts"
+
+export const metadata = {
+  title: 'Projects',
+  description: 'Machine Name Projects Page',
+}
 
 export default function Projects() {
   return (
-    <main className="flex min-h-[800px] h-[100vh] flex-col items-center pt-20 pl-20 pr-20">
-      <div className="container mx-auto flex flex-col items-center gap-10">
-      <h1 className="text-5xl">Projects</h1>
-      {projectPosts.map(project => (
-          <li style={{
-            listStyleType: 'none'
-          }} key={project.slug}>
-            <Link href={`/projects/${project.slug}`}>
-            <Paper className="p-2 rounded-none w-full text-left">
-              <div style={{
-                  border: '0.5px solid lightgray',
-                  overflow: 'none'
-                }}>
-                <Image src={project.image} alt="Home Screen" width={1600} height={800}/>
-                </div>
-                <h1 className="pt-2 text-3xl">{project.title}</h1>
-                <p className='py-2'>{project.description}</p>  
-                {/* <p className="font-semibold">by {project.author}</p>   */}
-            </Paper>
-            </Link>
-          </li>
-        ))}
-    <p className="text-xl">machinename.dev</p>
-    </div>
-    </main>
-  );
-};
+    <section>
+   
+      <h1 className="mb-8 tracking-tighter">
+        Projects
+      </h1>
+
+      {/* <p>On a mission to build products people <a href="/blog/developer-experience">love</a>, and along the way, teach the next generation of developers. Here's a summary of my work so far.</p> */}
+      <div className="my-8">
+        <ProjectPosts />
+      </div>
+
+      {/* <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
+
+      <h2 className="text-2xl mb-1 tracking-tighter">Vercel</h2> */}
+    </section>
+  )
+}

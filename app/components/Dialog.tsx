@@ -6,7 +6,7 @@ interface DialogProps {
     handleDeleteChat: () => void;
 }
 
-const Dialog: React.FC<DialogProps> = ({ isDialog, handleCloseDialog, handleDeleteChat }) => {
+export function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }: DialogProps) {
     const dialogRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const Dialog: React.FC<DialogProps> = ({ isDialog, handleCloseDialog, handleDele
     }
 
     return (
-        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 bg-white dark:bg-gray-800 shadow-md rounded-none p-4">
+        <div ref={dialogRef} className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 bg-white dark:bg-gray-800 shadow-md rounded-none p-4">
             <div className="text-left pb-2">
                 <p className="text-lg font-semibold">Delete Chat?</p>
             </div>
@@ -55,6 +55,4 @@ const Dialog: React.FC<DialogProps> = ({ isDialog, handleCloseDialog, handleDele
             </div>
         </div>
     );
-};
-
-export default Dialog;
+}
