@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import {
+    Button,
   CircularProgress,
   IconButton,
   InputBase
@@ -55,26 +56,39 @@ function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }: DialogProps) 
     }
 
     return (
-        <div ref={dialogRef} className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 bg-white dark:bg-gray-800 shadow-md rounded-none p-4">
+        <div ref={dialogRef} 
+     
+        style={{
+            position: 'fixed',
+            marginTop: '30vh',
+            width: '400px',
+            top: '0',
+            zIndex: '900',
+            backgroundColor: 'white',
+            border: '0.5px solid lightgray',
+            padding: '1rem'
+        }}>
             <div className="text-left pb-2">
                 <p className="text-lg font-semibold">Delete Chat?</p>
             </div>
             <div className="text-left pb-4">
                 <p>This will delete all of the chat history. This will also delete all related activity.</p>
             </div>
-            <div className="flex justify-end">
-                <button
-                    className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg mr-2"
+            <div className="flex justify-end gap-2">
+                <Button
+                    className="rounded-none"
+                    variant='contained'
                     onClick={handleCloseDialog}
                 >
                     CANCEL
-                </button>
-                <button
-                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg"
+                </Button>
+                <Button
+                    className="rounded-none"
+                    variant='contained'
                     onClick={handleDeleteChat}
                 >
                     DELETE
-                </button>
+                </Button>
             </div>
         </div>
     );
@@ -189,10 +203,14 @@ export default function Page() {
                     )}
                     <div ref={conversationEndRef} />
                 </>
-                <Dialog isDialog={isDialog} handleCloseDialog={()=> {
+
+            </section>
+
+            <>
+            <Dialog isDialog={isDialog} handleCloseDialog={()=> {
                     setIsDialog(false);
                 }} handleDeleteChat={handleDeleteChat}/>
-            </section>
+            </>
     
     <div className="flex flex-col fixed w-full bottom-0 max-w-2xl px-2">
                     <div className=" bg-gray-100 flex items-center rounded-none p-2">
