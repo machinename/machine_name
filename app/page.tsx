@@ -14,12 +14,12 @@ return (
     <h2 className="mb-2 tracking-tighter">
       Who We Are
     </h2>
-    <p className="mb-8">Hello, I'm Kendrick. Welcome to porfolio project—Machine Name.</p>
+    <p className="mb-8">Hello, I&aposm Kendrick. Welcome to porfolio project—Machine Name.</p>
 
     <h2 className="mb-2 tracking-tighter">
       Work
     </h2>
-    <p className="mb-8">On a mission to build products people, and along the way, teach the next generation of developers. Here's a summary of my work so far.</p>
+    <p className="mb-8">On a mission to build products people, and along the way, teach the next generation of developers. Here&aposs a summary of my work so far.</p>
 
     <h2 className="mb-2 tracking-tighter">
       Projects
