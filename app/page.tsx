@@ -15,10 +15,7 @@ return (
 
 
     <h1 className="tracking-tighter mb-8">Machine Name</h1>
-   
-    <h2 className="mb-2 tracking-tighter">
-      About
-    </h2>
+    
     <p className="mb-8">Hello, I&apos;m Kendrick. Welcome to my developer porfolio—Machine Name.</p>
     
 
