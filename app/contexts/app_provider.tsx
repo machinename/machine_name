@@ -37,7 +37,6 @@ const darkTheme = createTheme({
 interface Message {
     sender: string;
     message: string;
-    type: 'text' | 'code';
 }
 
 interface AppContextType {

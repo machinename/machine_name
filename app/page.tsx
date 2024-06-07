@@ -1,8 +1,13 @@
-import { ProjectPosts } from "./components/posts"
+// import { ProjectList } from "./components/posts"
+
+export const metadata = {
+  title: 'Home',
+  description: 'Machine Name Home Page',
+}
+
+import { ProjectList } from "./components/posts";
 
 export default function Page() {
-
-
 
 return (  
     
@@ -12,21 +17,22 @@ return (
     <h1 className="tracking-tighter mb-8">Machine Name</h1>
    
     <h2 className="mb-2 tracking-tighter">
-      Who We Are
+      About
     </h2>
-    <p className="mb-8">Hello, I&aposm Kendrick. Welcome to porfolio project—Machine Name.</p>
+    <p className="mb-8">Hello, I&apos;m Kendrick. Welcome to my developer porfolio—Machine Name.</p>
+    
 
     <h2 className="mb-2 tracking-tighter">
       Work
     </h2>
-    <p className="mb-8">On a mission to build products people, and along the way, teach the next generation of developers. Here&aposs a summary of my work so far.</p>
+    <p className="mb-8">Clyde & Co - Test Automation Engineer</p>
 
     <h2 className="mb-2 tracking-tighter">
       Projects
     </h2>
 
     <div className="mb-8">
-      <ProjectPosts />
+      <ProjectList />
     </div>
 
 

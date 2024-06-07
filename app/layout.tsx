@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     default: 'Machine Name',
     template: 'Welcome | Machine Name',
   },
-  description: 'This is my portfolio.',
+  description: 'This is my developer portfolio.',
   openGraph: {
     title: 'Machine Name',
-    description: 'This is my portfolio.',
+    description: 'This is my developer portfolio.',
     url: baseUrl,
     siteName: 'Machine Name',
     locale: 'en_US',
