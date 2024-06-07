@@ -48,7 +48,7 @@ export function Navbar() {
       }`}
     >
       <nav className="flex flex-row justify-between scroll-pr-6">
-        <div className="flex flex-row space-x-4">
+        <div className="flex flex-row space-x-1">
           {Object.entries(navItems).map(([path, { name }], index, array) => {
             const isLastItem = index === array.length - 1;
             return (

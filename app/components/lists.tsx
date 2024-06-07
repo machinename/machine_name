@@ -92,7 +92,7 @@ export function WorkList() {
     <div className='flex flex-col gap-2'>
       <p>In April 2023, I joined Clyde & Co in a newly created position as a Test Automation Engineer, leveraging my degree in Software Engineering. Initially, the automation team strictly used Eggplant Functional Test Suite due to its OCR capabilities and its proprietary language, SenseTalk, which allowed for test creation without extensive coding knowledge.</p> 
       <p>Upon my joining, we expanded our toolkit to include Selenium and Playwright, in addition to Eggplant. Our aim was to enhance the effectiveness of our automation efforts by incorporating more advanced object-oriented programming (OOP) principles.</p>
-      <p>My role involved developing these new frameworks with Selenium and Playwright, ensuring they were scalable and maintainable. This allowed us to meet the evolving needs of Clyde & Co's legal technology landscape, complementing our existing Eggplant-based automation test frameworks</p>
+      <p>My role involved developing these new frameworks with Selenium and Playwright, ensuring they were scalable and maintainable. This allowed us to meet the evolving needs of Clyde & Co&apos;s legal technology landscape, complementing our existing Eggplant-based automation test frameworks</p>
     </div>
   </>
   )
