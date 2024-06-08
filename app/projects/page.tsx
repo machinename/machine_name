@@ -1,9 +1,9 @@
 import { ProjectList } from "../components/lists"
 
 export const metadata = {
-  title: 'Projects',
-  description: 'Machine Name Projects Page',
+  title: 'Projects - machinename.dev',
 }
+
 
 export default function Projects() {
   return (

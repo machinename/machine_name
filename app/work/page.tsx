@@ -1,8 +1,7 @@
 import { WorkList } from "../components/lists"
 
 export const metadata = {
-  title: 'Projects',
-  description: 'Machine Name Work Page',
+  title: 'Work - machinename.dev',
 }
 
 export default function Page() {

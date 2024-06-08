@@ -9,16 +9,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: {
-    default: 'Machine Name',
-    template: 'Welcome | Machine Name',
-  },
-  description: 'This is my developer portfolio.',
+  title: 'Welcome - machinename.dev',
+  description: 'machinename.dev',
   openGraph: {
-    title: 'Machine Name',
-    description: 'This is my developer portfolio.',
+    title: 'machinename.dev',
+    description: 'machinename.dev',
     url: baseUrl,
-    siteName: 'Machine Name',
+    siteName: 'machinename.dev',
     locale: 'en_US',
     type: 'website',
   },
@@ -33,7 +30,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-}
+};
 
 
 export default function RootLayout({
@@ -48,6 +45,7 @@ export default function RootLayout({
           <AppProvider> 
           <Navbar/>
           {children}
+
           </AppProvider>
         </main>
       </body>
