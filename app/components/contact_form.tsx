@@ -41,7 +41,7 @@ export default function ContactForm() {
 
     return (
         <>
-            <h1  className="mb-4 tracking-tighter">/contact</h1>
+            <h1  className="mb-4 tracking-tighter">CONTACT</h1>
             <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 <TextField
                     className="w-full"
