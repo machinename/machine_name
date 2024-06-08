@@ -59,7 +59,7 @@ function ArrowIcon() {
 export function ProjectList() {
   return (
     <div>
-      <h1 className="mb-4 tracking-tighter">PROJECTS</h1>
+      <h1 className="mb-4 tracking-tighter">Projects</h1>
       <div className=' flex flex-col gap-2 justify-center ' >
         <Link className='flex flex-col' href='https://github.com/machinename/flutter_firebase_auth'  target='_blank' rel='noopener noreferrer' passHref>
           <h2 className=" tracking-tighter text-neutral-600 dark:text-neutral-400">Flutter Auth</h2>
@@ -84,7 +84,7 @@ export function ProjectList() {
 export function WorkList() {
   return (
   <>
-    <h1 className="mb-4 tracking-tighter">WORK</h1>
+    <h1 className="mb-4 tracking-tighter">Work</h1>
 
     <h2 className="tracking-tighter text-neutral-600 dark:text-neutral-400">Clyde & Co</h2>
     <h2 className="tracking-tighter mb-4 text-neutral-600 dark:text-neutral-400">Test Automation Engineer, 2023 — Current </h2>

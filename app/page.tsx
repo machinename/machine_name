@@ -99,7 +99,7 @@ export default function Page() {
             {showMiddleText &&
               <>
                 <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
-                <h1 className="mb-4 tracking-tighter">/work</h1>
+                <h1 className="mb-4 tracking-tighter">Work</h1>
                 <Link className='flex flex-col' href='/work'>
                   <h2 className="tracking-tighter text-neutral-600 dark:text-neutral-400">Clyde & Co</h2>
                   <h2 className="tracking-tighter text-neutral-600 dark:text-neutral-400">Test Automation Engineer, 2023 — Current </h2>
