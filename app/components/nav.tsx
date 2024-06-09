@@ -9,7 +9,7 @@ import React, { useState, useEffect, useRef } from 'react';
 // Navigation items with paths and names
 const navItems = {
   '/': {
-    name: 'MN',
+    name: 'Home',
   },
   '/work': {
     name: 'Work',
@@ -74,9 +74,7 @@ export function Navbar() {
         <Link href="https://github.com/machinename" target='_blank' rel='noopener noreferrer' passHref>
           <GitHub/>
         </Link>
-      
         </div>
-
       </nav>
     </Paper>
   );

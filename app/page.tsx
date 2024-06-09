@@ -28,7 +28,7 @@ export default function Page() {
   // State variables
   const [input, setInput] = useState<string>('');
   const [isDialog, setIsDialog] = useState(false);
-  const [isInputOpen, setIsInputOpen] = useState(false);
+  const [isInputOpen, setIsInputOpen] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   // const [showMiddleText, setShowMiddleText] = useState(false);
   // const [showLastText, setShowLastText] = useState(false);
@@ -104,14 +104,14 @@ export default function Page() {
             </h2>
             {/* {showMiddleText &&
               <> */}
-                <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
-                <WorkList showContent={false}/>
+                {/* <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
+                <WorkList showContent={false}/> */}
               {/* </>
             }
             {showLastText &&
               <> */}
-                <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
-                <ProjectList showContent={false}/>
+                {/* <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
+                <ProjectList showContent={false}/> */}
               {/* </>
               } */}
           </>
@@ -136,7 +136,7 @@ export default function Page() {
           setIsDialog(false);
         }} handleDeleteChat={handleDeleteChat} />
       </>
-      <div className={isInputOpen ? "flex flex-col bg-white fixed w-full bottom-0 max-w-3xl px-3 pt-3" : "bottom-0 fixed right-0 p-3"}>
+      <div className={isInputOpen ? "flex flex-col bg-white fixed w-full bottom-0 max-w-3xl px-4 pt-4" : "bottom-0 fixed right-0  p-4"}>
         {
           isInputOpen ?
             <>
@@ -188,7 +188,10 @@ export default function Page() {
               </div>
             </>
             :
-            <Button className='rounded-none' variant='contained' onClick={() => setIsInputOpen(true)}>AI Chat</Button>}
+            <div className='flex flex-row items-center'>
+             <Button className='rounded-none' variant='contained' onClick={() => setIsInputOpen(true)}>Chat</Button>
+            </div>
+            }
       </div>
     </>
   );

@@ -20,13 +20,11 @@ export default function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }
                 handleCloseDialog();
             }
         };
-
         if (isDialog) {
             document.addEventListener('mousedown', handleClickOutside);
         } else {
             document.removeEventListener('mousedown', handleClickOutside);
         }
-
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
@@ -37,17 +35,17 @@ export default function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }
     }
 
     return (
-        <div ref={dialogRef} 
-        style={{
-            position: 'fixed',
-            marginTop: '30vh',
-            width: '400px',
-            top: '0',
-            zIndex: '900',
-            backgroundColor: 'white',
-            border: '0.5px solid lightgray',
-            padding: '1rem'
-        }}>
+        <div ref={dialogRef}
+            style={{
+                position: 'fixed',
+                marginTop: '30vh',
+                width: '400px',
+                top: '0',
+                zIndex: '900',
+                backgroundColor: 'white',
+                border: '0.5px solid lightgray',
+                padding: '1rem'
+            }}>
             <div className="text-left pb-2">
                 <p className="text-lg font-semibold">Delete Chat?</p>
             </div>
@@ -55,20 +53,8 @@ export default function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }
                 <p>This will delete all of the chat history. This will also delete all related activity.</p>
             </div>
             <div className="flex justify-end gap-2">
-                <Button
-                    className="rounded-none"
-                    variant='contained'
-                    onClick={handleCloseDialog}
-                >
-                    CANCEL
-                </Button>
-                <Button
-                    className="rounded-none"
-                    variant='contained'
-                    onClick={handleDeleteChat}
-                >
-                    DELETE
-                </Button>
+                <Button className="rounded-none" variant='contained' onClick={handleCloseDialog}>CANCEL</Button>
+                <Button className="rounded-none" variant='contained' onClick={handleDeleteChat}>DELETE</Button>
             </div>
         </div>
     );
