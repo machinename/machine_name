@@ -68,9 +68,9 @@ export function Navbar() {
         <Link href="mailto:khlawton@asu.edu">
           <Email/>
         </Link>
-        <Link href="https://www.linkedin.com/in/kendrick-lawton-257684247/" target='_blank' rel='noopener noreferrer' passHref>
+        {/* <Link href="https://www.linkedin.com/in/kendrick-lawton-257684247/" target='_blank' rel='noopener noreferrer' passHref>
           <LinkedIn/>
-        </Link>
+        </Link> */}
         <Link href="https://github.com/machinename" target='_blank' rel='noopener noreferrer' passHref>
           <GitHub/>
         </Link>

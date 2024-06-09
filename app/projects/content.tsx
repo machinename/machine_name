@@ -10,7 +10,7 @@ export const FlutterAuthContent = () => {
       <div className='flex flex-col'>
         <p className="tracking-tighter text-neutral-600 dark:text-neutral-400">Features</p>
         <div className='tracking-tighter text-neutral-600 dark:text-neutral-400 ml-2'>
-          <p className='ml-2'> - Firebase Authentification</p>
+          <p className='ml-2'> - Secure Authentication</p>
           <p className='ml-2'> - Intuitive Flutter UI</p>
         </div>
       </div>
@@ -28,8 +28,7 @@ export const MachineNameContent = () => {
         <p className="tracking-tighter text-neutral-600 dark:text-neutral-400">Features</p>
         <div className='tracking-tighter text-neutral-600 dark:text-neutral-400 ml-2'>
         <p className='ml-2'> - Next.js App Router</p>
-        <p className='ml-2'> - Tailwind CSS Styling</p>
-        <p className='ml-2'> - Vertex AI</p>
+        <p className='ml-2'> - Vertex AI Chat Bot</p>
         </div>
       </div>
     </>
@@ -54,9 +53,9 @@ export const MiniMLContent = () => {
           <p className='ml-2'> - Model Export</p>
         </div>
       </div>
-      <div className='flex flex-row gap-2 items-center'>
+      {/* <div className='flex flex-row gap-2 items-center'>
         <Button variant='contained' className='rounded-none'>Download</Button>
-      </div>
+      </div> */}
     </>
   );
 }
