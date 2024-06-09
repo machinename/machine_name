@@ -19,47 +19,53 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useAppContext } from './contexts/app_provider';
 import Dialog from './components/dialog';
-import { ProjectList } from './components/lists';
+import { ProjectList, WorkList } from './components/lists';
 import Link from 'next/link';
 
 export default function Page() {
   const { isChatOpen, setIsChatOpen, conversation, setConversation } = useAppContext();
 
+  // State variables
   const [input, setInput] = useState<string>('');
   const [isDialog, setIsDialog] = useState(false);
   const [isInputOpen, setIsInputOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [showMiddleText, setShowMiddleText] = useState(false);
-  const [showLastText, setShowLastText] = useState(false);
+  // const [showMiddleText, setShowMiddleText] = useState(false);
+  // const [showLastText, setShowLastText] = useState(false);
 
   const conversationEndRef = useRef<HTMLDivElement>(null);
 
+  // Function to handle chat deletion
   const handleDeleteChat = () => {
     setConversation([]);
     setIsDialog(false);
     setIsChatOpen(false);
   }
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowMiddleText(true);
-    }, 1200);
-    return () => clearTimeout(timer);
-  }, []);
+  // Show middle text after 1.2 seconds
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowMiddleText(true);
+  //   }, 1200);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLastText(true);
-    }, 2400);
-    return () => clearTimeout(timer);
-  }, []);
+  // Show last text after 2.4 seconds
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowLastText(true);
+  //   }, 2400);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
+  // Scroll to the end of the conversation
   useEffect(() => {
     if (conversationEndRef.current) {
       conversationEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [conversation]);
 
+  // Function to handle message sending
   const handleMessageSend = async () => {
     setIsChatOpen(true);
     if (input.trim() !== '') {
@@ -70,7 +76,7 @@ export default function Page() {
       try {
         const result = await firebase.model.generateContent(responseInput);
         const response = result.response;
-        const text = response.text();
+        const text = await response.text();
         setConversation(prevConversation => [
           ...prevConversation,
           { sender: 'SERVER', message: text },
@@ -96,23 +102,18 @@ export default function Page() {
             <h2 className="tracking-tighter text-neutral-600 dark:text-neutral-400">
               Hello, my name is Kendrick. Welcome to my developer portfolio–machinename.dev, built with Next.js!
             </h2>
-            {showMiddleText &&
-              <>
+            {/* {showMiddleText &&
+              <> */}
                 <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
-                <h1 className="mb-4 tracking-tighter">Work</h1>
-                <Link className='flex flex-col' href='/work'>
-                  <h2 className="tracking-tighter text-neutral-600 dark:text-neutral-400">Clyde & Co</h2>
-                  <h2 className="tracking-tighter text-neutral-600 dark:text-neutral-400">Test Automation Engineer, 2023 — Current </h2>
-                </Link>
-              </>
+                <WorkList showContent={false}/>
+              {/* </>
             }
             {showLastText &&
-              <>
+              <> */}
                 <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
-                <div className="mb-8">
-                  <ProjectList />
-                </div>
-              </>}
+                <ProjectList showContent={false}/>
+              {/* </>
+              } */}
           </>
         )}
         <>
@@ -124,7 +125,7 @@ export default function Page() {
           ))
           )}
           {isLoading && (
-            <div ref={conversationEndRef} className="flex items-center  justify-center">
+            <div ref={conversationEndRef} className="flex items-center justify-center">
               <CircularProgress size={30} />
             </div >
           )}
@@ -192,4 +193,3 @@ export default function Page() {
     </>
   );
 }
-

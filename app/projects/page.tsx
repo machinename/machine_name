@@ -4,11 +4,10 @@ export const metadata = {
   title: 'Projects - machinename.dev',
 }
 
-
 export default function Projects() {
   return (
     <section>
-      <ProjectList/>
+      <ProjectList showContent={true}/>
     </section>
   )
 }

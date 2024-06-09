@@ -32,7 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -40,12 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased max-w-3xl mx-auto px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
-        <main className="flex items-center justify-center flex-col">
+      <body
+      className={inter.className}>
+        <main className="antialiased flex flex-col items-center mx-auto max-w-3xl px-4">
           <AppProvider> 
-          <Navbar/>
-          {children}
-
+            <Navbar/>
+            {children}
           </AppProvider>
         </main>
       </body>

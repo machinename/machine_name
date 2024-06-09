@@ -11,7 +11,6 @@ interface DialogProps {
     handleDeleteChat: () => void;
 }
 
-
 export default function Dialog({ isDialog, handleCloseDialog, handleDeleteChat }: DialogProps) {
     const dialogRef = useRef<HTMLDivElement>(null);
 

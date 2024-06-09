@@ -58,8 +58,6 @@ export const useAppContext = (): AppContextType => {
     return context;
 };
 
-
-// AppProvider component to manage theme, conversation, and chat state
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
     const [isChatOpen, setIsChatOpen] = useState(false);

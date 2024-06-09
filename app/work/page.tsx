@@ -7,7 +7,7 @@ export const metadata = {
 export default function Page() {
   return (
     <section>
-      <WorkList/>
+      <WorkList showContent={true} />
     </section>
   )
 }
