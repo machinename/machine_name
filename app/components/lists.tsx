@@ -1,5 +1,5 @@
 import { GitHub } from '@mui/icons-material';
-import { FlutterAuthContent, MachineNameContent, MiniMLContent } from '../projects/content';
+import { MachineNameContent, MiniMLContent } from '../projects/content';
 import Link from 'next/link';
 
 function ArrowIcon() {
@@ -28,20 +28,8 @@ export const ProjectList: React.FC<ShowContentProps> = ({ showContent }) => {
     <>
       <h1 className="mb-4 tracking-tighter">Projects</h1>
       <div className='flex flex-col'>
-        <>
-          <div className='flex flex-row items-center gap-2'>
-            <Link className="tracking-tighter text-xl" href="https://github.com/machinename/flutter_auth" target="_blank" rel="noopener noreferrer">Flutter Auth</Link>
-            <ArrowIcon />
-          </div>
-          {showContent && (
-            <>
-
-            <FlutterAuthContent />
-            <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
-            </>
-          )}
-        </>
-        <>
+  
+  
           <div className='flex flex-row items-center gap-2'>
             <Link href="https://github.com/machinename/machine_name "  target="_blank" rel="noopener noreferrer" className="tracking-tighter text-xl">machinename.dev</Link>
             <ArrowIcon />
@@ -52,8 +40,8 @@ export const ProjectList: React.FC<ShowContentProps> = ({ showContent }) => {
             <hr className="my-3 border-neutral-100 dark:border-neutral-800"></hr>
             </>
           )}
-        </>
-        <>
+      
+   
           <div className='flex flex-row items-center gap-2'>
             <Link href="https://github.com/machinename/mini_ml"  target="_blank" rel="noopener noreferrer"className="tracking-tighter text-xl">mini ML</Link>
             <ArrowIcon />
@@ -63,7 +51,7 @@ export const ProjectList: React.FC<ShowContentProps> = ({ showContent }) => {
             <MiniMLContent />
             </>
           )}
-        </>
+      
       </div>
     </>
   )

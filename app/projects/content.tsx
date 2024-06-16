@@ -1,22 +1,6 @@
 import { GitHub } from "@mui/icons-material";
 import { Button } from "@mui/material";
 
-export const FlutterAuthContent = () => {
-  return (
-    <>
-      <p className="tracking-tighter text-neutral-600 dark:text-neutral-400 mb-4">
-        A Flutter auth template built using Dart, Firebase, and Flutter!
-      </p>
-      <div className='flex flex-col'>
-        <p className="tracking-tighter text-neutral-600 dark:text-neutral-400">Features</p>
-        <div className='tracking-tighter text-neutral-600 dark:text-neutral-400 ml-2'>
-          <p className='ml-2'> - Secure Authentication</p>
-          <p className='ml-2'> - Intuitive Flutter UI</p>
-        </div>
-      </div>
-    </>
-  );
-}
 
 export const MachineNameContent = () => {
   return (
