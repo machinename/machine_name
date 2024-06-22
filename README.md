@@ -1,6 +1,6 @@
 # Machine Name
 
-Welcome to my developer portfolio – Machine Name, built with Next.js!
+Welcome to my developer portfolio built with Next.js!
 
 ## Tech Stack
 - **Framework**: Next.js
