@@ -1,4 +1,4 @@
-# Machine Name
+# kendricklawton.com
 
 Welcome to my developer portfolio built with Next.js!
 
