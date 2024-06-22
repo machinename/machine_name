@@ -16,7 +16,7 @@ To get started with this project, follow these steps:
 
 2. **Clone Repository:**
     ```
-    git clone https://github.com/machinename/machine_name.git
+    git clone https://github.com/machinename/kendricklawton.com.git
     cd machine_name
     ```
 3. **Install Dependencies:**
